@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFAudioRecorderApp.View.PageAudioListView">
+
+    <ContentPage.ToolbarItems>
+        
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+                <Label Text="LISTA AUDIOS" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+            </Frame>
+                <ListView x:Name="listViewAudios"  HasUnevenRows="True" SeparatorVisibility="None" ItemTapped="listViewAudios_ItemTapped"  ItemSelected="listViewAudios_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItem  Text="DETALLES" Invoked="SwipeItem_Invoked" />
+                                </SwipeView.RightItems>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding AudioId}" Grid.Row="0" Grid.Column="0" IsVisible="false"/>
+                                        <Label Text="{Binding AudioDescripcion}" Grid.Row="0" Grid.Column="1" />
+                                        <Label Text="{Binding AudioUrl}" Grid.Row="0" Grid.Column="2" FontSize="8" TextColor="Blue"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </SwipeView>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

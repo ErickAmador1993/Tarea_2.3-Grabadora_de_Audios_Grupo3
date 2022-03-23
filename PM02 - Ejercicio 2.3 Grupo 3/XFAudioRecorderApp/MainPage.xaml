@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFAudioRecorderApp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+            <Label Text="Ejercicio 2.3" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+        </Frame>
+        <Image Source="https://iconosmag.com/wp-content/uploads/2020/03/Comunidado-oficial-UTH-coronavirus-en-Honduras.jpg"
+                   HeightRequest="200"
+                   WidthRequest="400"
+                   HorizontalOptions="CenterAndExpand"
+                   Aspect="Fill"/>
+
+        <Button Text="GRABAR/DETENER AUDIO" Clicked="Button_Clicked" CornerRadius="60"/>
+
+        <Entry x:Name="txtDescripcion" Placeholder="DESCRIPCION"/>
+
+        <Button x:Name="saveAudio" Text="SALVAR" Clicked="saveAudio_Clicked" CornerRadius="60"/>
+
+        <Button x:Name="btnShowAudioList" Text="LISTA AUDIOS" Clicked="btnShowAudioList_Clicked" CornerRadius="60"/>
+
+        <Button x:Name="btnSalir" Text="SALIR DE LA APP" Clicked="btnSalir_Clicked" CornerRadius="60"/>
+
+        <Label Text="© Programacion Movil 2 2022" HorizontalTextAlignment="Center"/>
+
+    </StackLayout>
+
+</ContentPage>
